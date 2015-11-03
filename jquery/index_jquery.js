@@ -20,4 +20,4 @@ picTimer = function() { // sets timer for slideshow
 }
 
 url();
-setInterval("picTimer()",1000);
+setInterval("picTimer()",10000);

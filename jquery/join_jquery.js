@@ -1,4 +1,7 @@
-if( !$('#signup').validate({
+var form = $('#signup');
+var names = $('[name=name');
+
+form.validate({
     rules: {
        name: {
            required: true,
@@ -14,15 +17,15 @@ if( !$('#signup').validate({
            required: true,
            email: true,
        }
-   }
+   },
+    submitHandler: function(form) {
+      event.preventDefault();
+      window.location.href = "gallery.html?" + names.val() + "!"
+    }
 
-})) {
-    event.preventDefault();
-}
+});
 
-else {
-    $('#signup').attr('action','gallery.html')
-}
+
 
 
    
