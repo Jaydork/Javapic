@@ -1,7 +1,7 @@
-var $jumbo = $('.jumbotron');
-images = []
+var $jumbo = $('.jumbotron'); // selector for the jumbotron CSS 
+images = [] // blank array to load images into
 x = 0
-var url = function() {
+var url = function() { // addes images to images array
     for (var i = 1; i < 60; i++) {
         if (i < 10) {
             images.push('url("images/pdxcg_0' + i + '.jpg")') //adds a number 1-9  for those pictures below 10
@@ -20,4 +20,4 @@ picTimer = function() { // sets timer for slideshow
 }
 
 url();
-setInterval("picTimer()", 10000);
+setInterval("picTimer()", 10000); // 10 second interval
